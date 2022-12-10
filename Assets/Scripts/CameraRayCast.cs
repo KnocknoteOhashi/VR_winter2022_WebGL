@@ -26,16 +26,13 @@ public class CameraRayCast : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentSpeedText =
-            GameObject.Find("CurrentSpeedText").GetComponent<Text>();
-        selectGauge =
-            GameObject.Find("SelectGauge").GetComponent<RectTransform>();
+        currentSpeedText = GameObject.Find("CurrentSpeedText").GetComponent<Text>();
+        selectGauge = GameObject.Find("SelectGauge").GetComponent<RectTransform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Titleシーン意外だとめっちゃエラー出ちゃうのでifで囲ってます
         if (currentSpeedText != null && selectGauge != null)
         {
             Select();
